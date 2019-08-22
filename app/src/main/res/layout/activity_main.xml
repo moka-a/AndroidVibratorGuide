@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".MainActivity">
+
+	<TextView
+		android:id="@+id/textView_length"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dp"
+		android:textSize="14dp"
+		app:layout_constraintBottom_toTopOf="@+id/seekBar_length"
+		app:layout_constraintLeft_toLeftOf="@+id/seekBar_length"
+		tools:text="진동 길이 : 100 ms"/>
+
+	<TextView
+		android:id="@+id/textView_lengthDes"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="1 ~ 5000 (5초)"
+		android:textSize="14dp"
+		app:layout_constraintBottom_toTopOf="@+id/seekBar_length"
+		app:layout_constraintRight_toRightOf="@+id/seekBar_length"/>
+
+	<androidx.appcompat.widget.AppCompatSeekBar
+		android:id="@+id/seekBar_length"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginLeft="36dp"
+		android:layout_marginTop="130dp"
+		android:layout_marginRight="36dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+	<TextView
+		android:id="@+id/textView_amplitude"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="8dp"
+		android:textSize="14dp"
+		app:layout_constraintBottom_toTopOf="@+id/seekBar_amplitude"
+		app:layout_constraintLeft_toLeftOf="@+id/seekBar_amplitude"
+		tools:text="진동 세기 : 100"/>
+
+	<TextView
+		android:id="@+id/textView_amplitudeDes"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="1 ~ 255"
+		android:textSize="14dp"
+		app:layout_constraintBottom_toTopOf="@+id/seekBar_amplitude"
+		app:layout_constraintRight_toRightOf="@+id/seekBar_amplitude"/>
+
+	<androidx.appcompat.widget.AppCompatSeekBar
+		android:id="@+id/seekBar_amplitude"
+		android:layout_width="match_parent"
+		android:layout_height="50dp"
+		android:layout_marginLeft="36dp"
+		android:layout_marginTop="50dp"
+		android:layout_marginRight="36dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/seekBar_length"/>
+
+
+	<ImageView
+		android:id="@+id/imageView_play"
+		android:layout_width="80dp"
+		android:layout_height="80dp"
+		android:layout_centerVertical="true"
+		android:layout_marginLeft="4dp"
+		android:background="@drawable/sp_circle"
+		android:foreground="?attr/selectableItemBackgroundBorderless"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.8"
+		app:srcCompat="@drawable/vc_start"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
